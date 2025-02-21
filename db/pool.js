@@ -8,5 +8,6 @@ module.exports = new Pool({
   user: process.env.DB_ROLENAME,
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT // The default port
+  port: process.env.DB_PORT, // The default port
+  ssl: { rejectUnauthorized: false }
 });
