@@ -1,0 +1,39 @@
+<html>
+  <head>
+        <title>Update Product</title>
+        <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+        <h4>Edit Product</h4>
+
+        <form action="/products/update" method="POST">
+            <input type="hidden" name="productId" id="productId" value="<%= product.id %>" />
+            <input type="hidden" name="categoryId" id="categoryId" value="<%= product.category_id %>" />
+            <div class="formDiv">
+                <label for="productName">Product Name</label>
+                <input type="text" name="productName" id="productName" value="<%= product.name %>" required />
+            </div>
+            <div class="formDiv">
+                <label for="price">Price</label>
+                <input type="text" name="price" id="price"  value="<%= product.price %>" required />
+            </div>
+            <div class="formDiv">
+                <label for="size">Size</label>
+                <input type="text" name="size" id="size" value="<%= product.item_size %>" required />
+            </div>
+            <div class="formDiv">
+                <label for="color">Color</label>
+                <input type="text" name="color" id="color" value="<%= product.color %>" required />
+            </div>
+            <div class="formDiv">
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description" value="<%= product.description %>" />
+            </div>
+            <div>
+                <button type="submit">Update</button>
+                <a href="/" class="button">Back to Home</a>
+            </div>
+        </form>
+  </body>
+</html>

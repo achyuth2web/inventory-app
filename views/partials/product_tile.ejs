@@ -1,0 +1,17 @@
+<div class="tileDiv">
+  <img src="/productImg.jpg" width="150" height="150" />
+  <p><%= product.name %></p>
+  <div class="prodInfoDiv">
+    <p>$ <%= product.price %></p>
+    <p>
+      <!--<span style="background-color: <%= product.color %>;"></span>-->
+      <%= product.color %>
+    </p>
+
+    <p><%= product.item_size %></p>
+  </div>
+  <div class="actionsDiv">
+    <a href="/products/<%= product.id %>/edit" title="Edit Product"><i class="fa-solid fa-pen"></i></a>
+    <a href="/products/<%= product.id %>/delete" title="Delete Product"><i class="fa-solid fa-trash"></i></a>
+</div>
+</div>

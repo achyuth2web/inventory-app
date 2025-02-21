@@ -1,0 +1,38 @@
+<html>
+  <head>
+        <title>Create Product</title>
+        <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+        <h4>Create Product</h4>
+
+        <form action="/products/new" method="POST">
+            <input type="hidden" name="categoryId" id="categoryId" value="<%= categoryId %>" />
+            <div class="formDiv">
+                <label for="productName">Product Name</label>
+                <input type="text" name="productName" id="productName" required />
+            </div>
+            <div class="formDiv">
+                <label for="price">Price</label>
+                <input type="text" name="price" id="price" required />
+            </div>
+            <div class="formDiv">
+                <label for="size">Size</label>
+                <input type="text" name="size" id="size" required />
+            </div>
+            <div class="formDiv">
+                <label for="color">Color</label>
+                <input type="text" name="color" id="color" required />
+            </div>
+            <div class="formDiv">
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description" />
+            </div>
+            <div>
+                <button type="submit">Save</button>
+                <a href="/" class="button">Back to Home</a>
+            </div>
+        </form>
+  </body>
+</html>

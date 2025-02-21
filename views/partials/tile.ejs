@@ -1,0 +1,9 @@
+<div class="tileDiv">
+    <img src="/productImg.jpg" width="150" height="150"/>
+    <p><%= category.name %></p>
+    <div class="actionsDiv">
+        <a href='/products/<%= category.id %>/show' title="Show Products"><i class="fa-solid fa-eye"></i></a>
+        <a href="/categories/<%= category.id %>/edit" title="Edit Category"><i class="fa-solid fa-pen"></i></a>
+        <a href="/categories/<%= category.id %>/delete" title="Delete Category"><i class="fa-solid fa-trash"></i></a>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<html>
+  <head>
+        <title>Create Category</title>
+        <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+        <h4>Create Category</h4>
+
+        <form action="/categories/new" method="POST">
+            <div class="formDiv">
+                <label for="categoryName">Category Name</label>
+                <input type="text" name="categoryName" id="categoryName" required />
+            </div>
+            <div class="formDiv">
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description" />
+            </div>
+            <div>
+                <button type="submit">Save</button>
+                <a href="/"  class="button">Back to Home</a>
+            </div>
+        </form>
+  </body>
+</html>
